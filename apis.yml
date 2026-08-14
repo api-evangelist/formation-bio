@@ -12,22 +12,17 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/formation-bio.png
 name: Formation Bio
-description: >-
-  Formation Bio (formerly TrialSpark, founded 2016 in New York City) is a
-  tech-driven, AI-native pharmaceutical company that aims to bring new treatments
-  to patients faster and more efficiently. Rather than discovering drugs, Formation
-  Bio in-licenses and acquires clinical-stage drug assets from pharma companies,
-  universities, and biotech firms, then develops them using proprietary technology
-  platforms, process automation, and large language models applied across the drug
-  development lifecycle — patient recruitment, e-consent, data management,
-  monitoring, and biostatistics. The company rebranded from TrialSpark to Formation
-  Bio in 2023 as it moved from a pure clinical-trial software platform to combined
-  platform-plus-asset ownership. It raised a $372M Series D in 2024 and announced a
-  first-in-class AI collaboration with Sanofi and OpenAI. Formation Bio operates
-  hybrid teams across New York City, Boston, the San Francisco Bay Area, and North
-  Carolina's Research Triangle. It is a private company with no public developer
-  API program; this profile captures its identity and public web surface for the
-  API Evangelist network.
+description: Formation Bio (formerly TrialSpark, founded 2016 in New York City) is a tech-driven, AI-native
+  pharmaceutical company that aims to bring new treatments to patients faster and more efficiently. Rather
+  than discovering drugs, Formation Bio in-licenses and acquires clinical-stage drug assets from pharma
+  companies, universities, and biotech firms, then develops them using proprietary technology platforms,
+  process automation, and large language models applied across the drug development lifecycle — patient
+  recruitment, e-consent, data management, monitoring, and biostatistics. The company rebranded from TrialSpark
+  to Formation Bio in 2023 as it moved from a pure clinical-trial software platform to combined platform-plus-asset
+  ownership. It raised a $372M Series D in 2024 and announced a first-in-class AI collaboration with Sanofi
+  and OpenAI. Formation Bio operates hybrid teams across New York City, Boston, the San Francisco Bay
+  Area, and North Carolina's Research Triangle. It is a private company with no public developer API program;
+  this profile captures its identity and public web surface for the API Evangelist network.
 url: https://raw.githubusercontent.com/api-evangelist/formation-bio/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -64,6 +59,46 @@ common:
   url: https://www.formation.bio/documents/privacy-policy
 - type: GitHubOrganization
   url: https://github.com/trialspark
+- type: DomainSecurity
+  url: security/formation-bio-domain-security.yml
+- type: Website
+  url: https://www.formation.bio/
+- type: About
+  url: https://www.formation.bio/about-us
+- type: Press
+  url: https://www.formation.bio/press
+- type: Careers
+  url: https://www.formation.bio/careers
+- type: Contact
+  url: https://www.formation.bio/contact
+- type: LinkedIn
+  url: https://www.linkedin.com/company/formationbio/
+- type: Twitter
+  url: https://x.com/formationbio/
+- type: YouTube
+  url: https://www.youtube.com/@FormationBio
+- type: SecondaryMarket
+  url: https://forgeglobal.com/trialspark_stock/
+- type: Packages
+  url: packages/formation-bio-packages.yml
+- type: LLMsTxt
+  url: llms/formation-bio-llms.txt
+- type: DomainSecurity
+  url: security/formation-bio-domain-security.yml
+- type: DomainSecurity
+  url: security/formation-bio-domain-security.yml
+- type: Website
+  url: https://formation.bio
+- type: Blog
+  url: https://formation.bio/blog
+- type: PrivacyPolicy
+  url: https://formation.bio/documents/privacy-policy
+- type: Packages
+  url: packages/formation-bio-packages.yml
+- type: LLMsTxt
+  url: llms/formation-bio-llms.txt
+- type: DomainSecurity
+  url: security/formation-bio-domain-security.yml
 - type: DomainSecurity
   url: security/formation-bio-domain-security.yml
 x-enrichment:
