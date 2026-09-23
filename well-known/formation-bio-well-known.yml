@@ -2,30 +2,12 @@ generated: '2026-07-31'
 method: probed
 source: live HTTP probes
 host: https://www.formation.bio
-notes: >-
-  No /.well-known/ document is published on any Formation Bio host. Every probed path
-  returned HTTP 404. Recorded for auditability only — NO `WellKnown` pointer is wired
-  in apis.yml, because no well-known document actually exists and the
-  `well_known_catalog` scoring check must not be credited for an empty result.
-  Note the site (Next.js) answers HTTP 200 with an SPA "Oh no!" not-found shell for
-  arbitrary root paths (/llms.txt, /openapi.json, /swagger.json, /docs, /redoc,
-  /graphql all returned 200 + text/html), so only the /.well-known/* namespace, which
-  returns real 404s, gives a trustworthy signal here.
-documents:
-- path: /.well-known/security.txt
-  status: 404
-- path: /.well-known/openid-configuration
-  status: 404
-- path: /.well-known/oauth-authorization-server
-  status: 404
-- path: /.well-known/api-catalog
-  status: 404
-- path: /.well-known/ai-plugin.json
-  status: 404
-- path: /.well-known/agent-card.json
-  status: 404
-- path: /.well-known/agent.json
-  status: 404
+notes: No /.well-known/ document is published on any Formation Bio host. Every probed path returned HTTP
+  404. Recorded for auditability only — NO `WellKnown` pointer is wired in apis.yml, because no well-known
+  document actually exists and the `well_known_catalog` scoring check must not be credited for an empty
+  result. Note the site (Next.js) answers HTTP 200 with an SPA "Oh no!" not-found shell for arbitrary
+  root paths (/llms.txt, /openapi.json, /swagger.json, /docs, /redoc, /graphql all returned 200 + text/html),
+  so only the /.well-known/* namespace, which returns real 404s, gives a trustworthy signal here.
 additional_hosts:
 - host: https://formation.bio
   result: redirects to https://www.formation.bio
@@ -33,8 +15,7 @@ additional_hosts:
   - path: /.well-known/security.txt
     status: 404
 - host: https://app.formation.bio
-  result: resolves (64.239.109.65) but returns HTTP 404 text/plain for every path
-    including /
+  result: resolves (64.239.109.65) but returns HTTP 404 text/plain for every path including /
   probes:
   - path: /.well-known/security.txt
     status: 404
@@ -56,3 +37,25 @@ nxdomain_hosts:
 - trust.formation.bio
 - mcp.formation.bio
 - muse.formation.bio
+hosts:
+- host: https://www.formation.bio
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.
